@@ -1,0 +1,29 @@
+@import '../index.scss';
+
+.Navigation {
+  ul {
+   list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    li {
+      margin: 10px 20px;
+      a{
+        text-decoration: none;
+        transition: color 0.25ms ease-in;
+        color: $primary-color;
+        &:visited {
+          color: brighten($primary-color, 20%);
+        }
+        &:hover {
+        }
+
+        &:hover {
+          color: darken($primary-color, 20%);
+        }
+      }
+    }
+  }
+}
