@@ -12,8 +12,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 50%;
     li{
-      margin: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      background-color: $primary-color;
+      color: $white;
+      transition: background-color 0.5ms ease-in;
+      &:hover {
+        background-color: darken($primary-color, 50%);
+      }
+    }
+    .delete-button{
+      cursor: pointer;
+      padding: 0 0.25rem;
     }
   }
 }
