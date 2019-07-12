@@ -8,7 +8,7 @@ const Navigation = ({ links }) => (
             <ul>
                 { links.map( link => (
                     <li key={link.to}>
-                        <a href={link.to} title={link.label} target="_blank">
+                        <a href={link.to} title={link.label} target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={link.icon}/>
                         </a>
                     </li>

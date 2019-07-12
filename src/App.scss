@@ -1,7 +1,7 @@
 @import './index.scss';
 
 .App-logo {
-  animation: App-logo-spin infinite 20s ease-in;
+  animation: App-logo-spin infinite 5ms ease-in;
   height: 10vmin;
   pointer-events: none;
 }
@@ -15,6 +15,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: $primary-color;
+  h1{
+    font-weight: 100;
+    font-size: 5rem;
+  }
 }
 
 .logo-container {
@@ -22,6 +26,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  svg{
+    margin-right: 0.5rem;
+  }
 }
 
 .App-content{
@@ -33,24 +40,38 @@
     justify-content: center;
     margin: 0.5rem 0;
     input {
-      padding: 0.5rem;
+      padding: 0.5rem 33px 0.5rem 0.5rem;
       font-size: 16px;
+      width: 40vw;
+      border: 1px solid $green;
+      &:focus {
+        outline : 2px solid $green;
+        outline-offset: unset;
+      }
     }
     button {
       padding: 0.5rem;
       color: $white;
       font-size: 16px;
-      margin: 0 0.25rem;
       background-color: $green;
-      border: 2px solid $green;
+      border: 1px solid $green;
       cursor: pointer;
+      position: absolute;
+      x-index: 9000;
+      transform: translateX(-33px);
+      &:hover{
+        background-color: darken($green, 10%);
+        border: 2px solid darken($green, 10%);
+        transition: all 0.25s ease-in;
+      }
     }
-
-    .list-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  }
+  .list-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
   }
 }
 

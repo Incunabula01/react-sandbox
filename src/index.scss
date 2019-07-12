@@ -6,6 +6,7 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
@@ -13,8 +14,8 @@ code {
   monospace;
 }
 
-$primary-color: #61DAFB;
+$primary-color: #00d5ff;
 $primary-background: #999;
 $header-background: #282c34;
 $white: #ffffff;
-$green: darken(springgreen, 25%);
+$green: #08bf91;

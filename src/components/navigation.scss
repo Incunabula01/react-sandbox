@@ -14,12 +14,12 @@
         text-decoration: none;
         transition: color 0.25ms ease-in;
         color: $primary-color;
+        svg {
+          cursor: pointer;
+        }
         &:visited {
           color: brighten($primary-color, 20%);
         }
-        &:hover {
-        }
-
         &:hover {
           color: darken($primary-color, 20%);
         }

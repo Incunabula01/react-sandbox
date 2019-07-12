@@ -3,6 +3,11 @@
 .TodoList{
   display: flex;
   justify-content: center;
+  height: 50vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 50vh;
+  width: 100%;
   ul{
     list-style: none;
     margin: 0;
@@ -12,23 +17,32 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 100%;
     li{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       margin: 0.5rem 0;
       padding: 0.5rem;
-      background-color: $primary-color;
+      background-color: darken($primary-color, 10%);
       color: $white;
-      transition: background-color 0.5ms ease-in;
+      min-width: 100%;
+      width: 25vw;
+      text-transform: capitalize;
       &:hover {
-        background-color: darken($primary-color, 50%);
+        background-color: darken($primary-color, 25%);
+        transition: background-color 0.25s ease-in;
       }
+      .action-button{
+        cursor: pointer;
+        padding: 0 0.5rem;
+      }
+
     }
-    .delete-button{
-      cursor: pointer;
-      padding: 0 0.25rem;
-    }
+  }
+  .item-done {
+    text-decoration: line-through;
+    color: darken($white, 10%);
+    background-color: darken($primary-color, 20%);
   }
 }

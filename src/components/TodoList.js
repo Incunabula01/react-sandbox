@@ -11,15 +11,25 @@ class TodoList extends Component {
         super(props);
 
         this.createTasks = this.createTasks.bind(this);
+        this.manageTasks = this.manageTasks.bind(this);
     }
 
     deleteTasks(key) {
         this.props.delete(key);
     };
 
-    createTasks(items) {
-        return <li key={items.key}>{items.text} <span className="delete-button" onClick={() => this.deleteTasks(items.key)}><FontAwesomeIcon icon="trash"/></span></li>
+    manageTasks(key) {
+        this.props.itemDone(key);
     };
+
+    createTasks(items) {
+        return  <li className={items.taskDone ? 'item-done' : ''} key={items.key}>
+                    <span className="action-button" onClick={()=> this.manageTasks(items.key)} ><FontAwesomeIcon icon={items.taskDone ? "check" : "check-square"}/></span>
+                    {items.text}
+                    <span className="action-button" onClick={() => this.deleteTasks(items.key)}><FontAwesomeIcon icon="trash"/></span>
+                </li>;
+    };
+
 
     render() {
         let todoItems = this.props.items;
