@@ -8,16 +8,19 @@
 
 .App-header {
   background-color: $primary-background;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  //min-height: 10vh;
+  //display: flex;
+  //flex-direction: column;
+  //align-items: center;
+  //justify-content: center;
+  //font-size: calc(10px + 2vmin);
   color: $primary-color;
   h1{
     font-weight: 100;
     font-size: 5rem;
+  }
+  svg{
+    margin-right: 0.5rem;
   }
 }
 
@@ -26,10 +29,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  svg{
-    margin-right: 0.5rem;
-  }
 }
+
+
+
 
 .App-content{
   padding: 2rem 0;
@@ -56,12 +59,12 @@
       background-color: $green;
       border: 1px solid $green;
       cursor: pointer;
-      position: absolute;
-      x-index: 9000;
-      transform: translateX(-33px);
+      //position: absolute;
+      //x-index: 9000;
+      //transform: translateX(-33px);
       &:hover{
         background-color: darken($green, 10%);
-        border: 2px solid darken($green, 10%);
+        border: 1px solid darken($green, 10%);
         transition: all 0.25s ease-in;
       }
     }

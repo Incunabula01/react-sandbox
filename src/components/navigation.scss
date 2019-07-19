@@ -13,9 +13,13 @@
       a{
         text-decoration: none;
         transition: color 0.25ms ease-in;
-        color: $primary-color;
+        color: inherit;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         svg {
           cursor: pointer;
+          margin-right: 0.25rem;
         }
         &:visited {
           color: brighten($primary-color, 20%);
