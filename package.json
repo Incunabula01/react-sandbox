@@ -30,7 +30,6 @@
   ],
   "devDependencies": {
     "@material-ui/core": "^4.2.0",
-    "moment": "^2.24.0",
     "node-sass": "^4.11.0",
     "react-flip-move": "^3.0.3",
     "react-jss": "^8.6.1",

@@ -1,0 +1,19 @@
+@import "../index.scss";
+
+.Calendar{
+  background-color: darkturquoise;
+  color: #ffffff;
+  width: 100%;
+  .weekday {
+    padding: 0.25rem;
+    color: white;
+  }
+  thead {
+
+  }
+  tbody {
+    tr{
+      border: 1px solid $primary-color;
+    }
+  }
+}
